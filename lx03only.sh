@@ -1,5 +1,13 @@
 #!/bin/bash
 curl -l /var/lib/CentOS-7-x86_64-DVD-2003.iso  -O https://mirror.nsc.liu.se/centos-store/7.8.2003/isos/x86_64/CentOS-7-x86_64-DVD-2003.iso
+cat << EOF > /etc/modules-load.d/isomods.conf
+loop
+isofs
+EOF
+modprobe loop
+modprobe isofs
+echo '/var/lib/CentOS-7-x86_64-DVD-2003.iso   /opt/shared/CentOS/ iso9660 defaults 0 0' >> /etc/fstab
+mount -a
 cat << EOF > /etc/yum.repos.d/iso.repo
 [iso]
 name=iso
