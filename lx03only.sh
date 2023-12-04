@@ -1,7 +1,7 @@
 #!/bin/bash
 curl -o /var/lib/CentOS-7-x86_64-DVD-2003.iso -L https://mirror.nsc.liu.se/centos-store/7.8.2003/isos/x86_64/CentOS-7-x86_64-DVD-2003.iso
-cat << EOF > /etc/modules-load.d/isomods.conf
 mkdir -p /opt/shared/CentOS/
+cat << EOF > /etc/modules-load.d/isomods.conf
 loop
 isofs
 EOF
