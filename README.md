@@ -15,7 +15,7 @@ curl -sL https://github.com/lerobinson-beyondtrust/pmul-qualityoflife-scripts/ra
 
 ## Set timesync to dc01
 
-This script sets the ntp server to `dc01.bt.lab` and restarts the time server.
+This script sets the ntp server to `dc01.bt.lab` and restarts the time server. Should be run on all three lx servers
 
 ```bash
 curl -sL https://github.com/lerobinson-beyondtrust/pmul-qualityoflife-scripts/raw/main/timefix.sh | bash -s
