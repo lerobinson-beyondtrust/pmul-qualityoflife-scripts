@@ -9,3 +9,4 @@ then
   chronyc makestep
 fi
 echo 'run `chronyc sources` to check the timeserver is set to dc01.bt.lab'
+echo 'run `date` a few times to check the time has changed correctly'
