@@ -6,7 +6,7 @@ then
   sed -i '4,6d' /etc/chrony.conf
   echo 'maxdistance 100' >> /etc/chrony.conf
   systemctl restart chronyd
-  chronyc makestep
 fi
+chronyc makestep
 echo 'run `chronyc sources` to check the timeserver is set to dc01.bt.lab'
 echo 'run `date` a few times to check the time has changed correctly'
